@@ -36,6 +36,13 @@ public class ClassOne {
 		System.out.println(driver.getTitle());
 	}
 	
+	@Test(priority=4)
+	public void jobRightTest()
+	{
+		driver.get("https://jobright.ai/jobs/recommend");
+		System.out.println(driver.getTitle());
+	}
+	
 	@AfterMethod
 	public void tearDown()
 	{
