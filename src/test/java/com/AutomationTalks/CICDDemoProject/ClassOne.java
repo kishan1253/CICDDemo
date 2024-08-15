@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class ClassOne {
@@ -36,10 +37,17 @@ public class ClassOne {
 		System.out.println(driver.getTitle());
 	}
 	
-	@Test(priority=4)
+	@Test@Ignore
 	public void jobRightTest()
 	{
 		driver.get("https://jobright.ai/jobs/recommend");
+		System.out.println(driver.getTitle());
+	}
+	
+	@Test(priority=4)
+	public void diceTest()
+	{
+		driver.get("https://www.dice.com/dashboard/login");
 		System.out.println(driver.getTitle());
 	}
 	
